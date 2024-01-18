@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$USER_HOME$/.pub-cache/hosted/http%58%47%47192.168.253.176%588080/device_info_plus-4.0.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/http%58%47%47192.168.253.176%588080/flutter_image_compress-1.1.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/http%58%47%47192.168.253.176%588080/image_gallery_saver-1.7.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/http%58%47%47192.168.253.176%588080/path_provider-2.0.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/http%58%47%47192.168.253.176%588080/permission_handler_android-11.1.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/http%58%47%47192.168.253.176%588080/shared_preferences-2.0.7/android" />
+            <option value="$PROJECT_DIR$/../../android" />
+            <option value="$PROJECT_DIR$/../../android/vp_log" />
+            <option value="$PROJECT_DIR$/../../android/vp_p2p" />
+            <option value="$PROJECT_DIR$/../../android/vp_play" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
