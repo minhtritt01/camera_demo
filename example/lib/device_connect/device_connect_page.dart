@@ -28,7 +28,8 @@ class DeviceConnectPage extends GetView<DeviceConnectLogic> {
                         size: 300.0,
                       ),
                       SizedBox(height: 10),
-                      Text("请扫描二维码连接设备后等待设备搜索结果",
+                      Text(
+                          "Please scan the QR code to connect to the device and wait for the device search results.",
                           style: TextStyle(color: Colors.red))
                     ],
                   ),
@@ -51,7 +52,7 @@ class DeviceConnectPage extends GetView<DeviceConnectLogic> {
                                     child: TextField(
                                       controller: controller.textController,
                                       decoration: InputDecoration(
-                                        labelText: '请输入密码',
+                                        labelText: 'Please enter password',
                                         border: OutlineInputBorder(),
                                       ),
                                     ),
@@ -64,7 +65,7 @@ class DeviceConnectPage extends GetView<DeviceConnectLogic> {
                                     controller.generateQrCode();
                                   },
                                   child: Text(
-                                    "点击生成二维码",
+                                    "Click to generate QR code",
                                     style: TextStyle(color: Colors.blue),
                                   )),
                               SizedBox(height: 50),
@@ -73,8 +74,8 @@ class DeviceConnectPage extends GetView<DeviceConnectLogic> {
                         : Container(
                             height: 200,
                             alignment: Alignment.center,
-                            child:
-                                Text("未检测到wifi, 请确保手机连接WI-FI \n (app需打开位置权限)"));
+                            child: Text(
+                                "wifi not detected, Please make sure your phone is connected to Wi-Fi-FI \n (App needs to open location permission)"));
                   }, controller.state!.wifiName),
                 );
         }, controller.state!.isShowQR),

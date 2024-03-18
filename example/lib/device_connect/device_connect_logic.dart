@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:network_info_plus/network_info_plus.dart';
+import 'package:permission_handler/permission_handler.dart';
 import '../utils/app_web_api.dart';
 import '../utils/super_put_controller.dart';
 import '../utils/vuid_prefix_helper.dart';
@@ -21,7 +22,7 @@ class DeviceConnectLogic extends SuperPutController<DeviceConnectedState> {
   @override
   void onInit() {
     cleanDevice();
-    getWifiInfo();
+    requestLocation();
     super.onInit();
   }
 
@@ -35,6 +36,28 @@ class DeviceConnectLogic extends SuperPutController<DeviceConnectedState> {
   @override
   void onHidden() {
     // TODO: implement onHidden
+  }
+  void requestLocation() async {
+    print('requestLocation');
+    var blue = await Permission.location.status;
+    if (blue != PermissionStatus.granted) {
+      if (Platform.isIOS) {
+        await [Permission.location].request();
+      }
+    } else {
+      getWifiInfo();
+    }
+
+    if (Platform.isAndroid) {
+      var bluetoothScan = await Permission.location.status;
+
+      if (blue != PermissionStatus.granted ||
+          bluetoothScan != PermissionStatus.granted) {
+        await [
+          Permission.location, //相机
+        ].request();
+      }
+    }
   }
 
   void getWifiInfo() async {
